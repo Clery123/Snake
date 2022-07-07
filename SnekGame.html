@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/dark-onsen-css-components.css">
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+        <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+    </head>
+<body style= "background-color: #363738;">
+    <audio id="myAudio">
+        <source src="ROTMG_Theme.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    <ons-button modifier="outline dark-onsen-css-components" id="start" onclick ="StartGame()">Start</ons-button>
+    <ons-button modifier="outline dark-onsen-css-components" id="pause" onclick ="PauseGame()">Pause</ons-button>
+    <ons-button modifier="outline dark-onsen-css-components" id="lvlS" onclick ="LevelSelector()">Select Level</ons-button>
+    <ons-button modifier="outline dark-onsen-css-components" id="start" onclick ="EnableCheats()">Cheats</ons-button>
+    <ons-button modifier="outline dark-onsen-css-components" id="resetScore" onclick ="resetScore()">Reset Score</ons-button>
+    <br>
+    <ons-dialog id="dialog-1">
+        <div class="toolbar">
+            <div class="toolbar__center">Cheat List</div>
+        </div>
+        <ons-carousel style="width: 100%; height: 300px" swipeable auto-scroll>
+            <ons-carousel-item>
+                <ons-page>
+                    <p style="text-align: center;">
+                        Enable Cheats
+                    </p>
+                    <div class="right" style="text-align: center;">
+                        <ons-switch unchecked onchange="swotch();" id="stch"></ons-switch>
+                    </div>
+                    <ons-list-item tappable>
+                        <div class="center">
+                            <div id="rangeOne">
+                            Game Speed: 115    
+                            </div> 
+                            <ons-range disabled = "true" modifier="material" id="range_1" style="width: 100%;" value="115" min="45" max="780" step="5" onchange="range1(this.value)"></ons-range>    
+                        </div>
+                      </ons-list-item>
+                      <br>
+                        <div style="text-align: left; display: none;" id="hidden">
+                        Press "c" to add tail<br>
+                        Press "m" to relocate the food
+                        </div>  
+                        <ons-button style="margin: auto; width: 16%; left: 40%;"id="start" onclick ="hidePopUp()">Ok</ons-button>    
+                </ons-page>
+            </ons-carousel-item>
+        </ons-carousel> 
+          
+      </ons-dialog>
+      <p id="C" style="font-weight: bold; color:#FFFFFF;">Highest Score: </p>
+      <p id="D" style="font-weight: bold; color:#FFFFFF;">Current Score: </p>
+    <canvas id="myCanvas" width="800" height="600" style="border:8px solid #454647; background-color: #242526;">Error</canvas>
+    <script src="src/index.js"></script> 
+</body>
+</html>

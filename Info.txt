@@ -1,0 +1,15 @@
+Aplikácia sa ovláda šípkami
+Hra má 3 levely
+1. level - Nieje možné prechádzať cez steny
+2. level - Je možné prechádzať stenami
+3. level - Je možné prechádzať stenami a zakaždým,
+keď had prejde stenou, sa hra spomalí alebo zrýchli podľa toho, cez ktorú stenu prešiel.
+
+
+Použité súčastí:
+-localStorage na uloženie skóre
+-využitie Canvas
+-zvuky
+-apk vytvorené pomocou Monaca
+na androide ovládanie swipe-ovaním
+-GUI pomocou Onsen
